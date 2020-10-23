@@ -1,0 +1,212 @@
+body {
+  text-align: center;
+  justify-content: center;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 200;
+}
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 4em;
+  line-height: 1.3em;
+  margin-top: -.5em;
+}
+h2 a {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  font-size: 2.2em;
+  color: black;
+  text-decoration: none;
+}
+li a {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+}
+figure {
+  padding: 0;
+  margin: 0;
+}
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10%;
+  height: 4.7em;
+  margin: -1.5em 0;
+  background-color: white;
+}
+.navlinks {
+  list-style: none;
+}
+.navlinks li {
+  display: inline-block;
+  padding: 0 1em;
+}
+.navlinks li a {
+  transition: all 0.3s ease 0s;
+}
+.navlinks li a:hover {
+  color: grey;
+}
+.fullnav {
+  position: sticky;
+  top: 0px;
+}
+button {
+  padding: 15px 40px;
+  background-color: white;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+button:hover {
+  transition: all 0.3s ease 0s;
+  border-radius: 30px;
+  background-color: black;
+  color: white;
+}
+.socialmedia a img {
+  height: 1.5em;
+  margin: .6em .1em;
+}
+.socialmedia a img:hover {
+  transform: scale(1.1);
+}
+.banner {
+  position: relative;
+  z-index: 0;
+}
+.bannertext {
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: 1em;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+}
+.bannertext p {
+  font-weight: 300;
+}
+.banner img {
+  width: 100%;
+  height: 550px;
+  object-fit: cover;
+  margin: 0;
+  padding: 0;
+}
+.slider {
+  overflow: hidden;
+}
+.slider figure {
+  position: relative;
+  width: 300%;
+  margin: 0;
+  left: 0;
+  animation: 20s slider infinite;
+}
+.slider figure div {
+  width: 33.3333%;
+  float: left;
+}
+#moretext {
+  width: 90%;
+}
+.greybox {
+  background-color: #F5F5F5;
+  display: flex;
+  align-items: center;
+  position: relative;
+  height: 600px;
+  margin: 2em 8em 3em 8em;
+}
+.greybox img {
+  width:50%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+.greybox-text {
+  padding: 1.4em;
+  font-family: 'Playfair Display', serif;
+  font-size: 1.5em;
+  text-align: left;
+}
+.greybox-text p {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 300;
+  font-size: .7em;
+  color: grey;
+}
+.greybox-logo {
+  position: absolute;
+  bottom: .1em;
+  right: 1em;
+  font-size: 3em;
+}
+span {
+  color: red;
+}
+.girl {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  object-position: bottom;
+  margin: 0;
+  padding: 0;
+}
+@keyframes slider {
+  0% {
+    left: 0;
+  }
+  30% {
+    left: 0;
+  }
+  35% {
+    left: -100%;
+  }
+  65% {
+    left: -100%;
+  }
+  70% {
+    left: -200%;
+  }
+  95% {
+    left: -200%;
+  }
+  100% {
+    left: 0;
+  }
+}
+@media (max-width: 700px)
+{
+  .greybox {
+    display: block;
+    margin: 2em;
+    height: 100%;
+  }
+  .greybox img {
+    width: 100%;
+  }
+  .greybox-text {
+    margin-top: -1.5em;
+  }
+
+}
+@media (max-width: 800px)
+{
+  h1 {
+    font-size: 2.5em;
+  }
+  .greybox-logo {
+    display: none;
+  }
+}
+@media (max-width: 900px)
+{
+  .greybox {
+    margin: 2em 4em 3em 4em;
+  }
+}
