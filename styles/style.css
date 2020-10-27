@@ -4,24 +4,30 @@ body {
   text-decoration: none;
   margin: 0;
   padding: 0;
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Rosario', sans-serif;
   font-weight: 200;
 }
 h1 {
   font-family: 'Playfair Display', serif;
-  font-size: 4em;
+  font-size: 3.3em;
+  letter-spacing: 2px;
   line-height: 1.3em;
   margin-top: -.5em;
 }
 h2 a {
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Rosario', sans-serif;
   font-weight: 600;
-  font-size: 2.2em;
+  font-size: 2em;
   color: black;
   text-decoration: none;
 }
+h4 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.2em;
+  font-weight: 200;
+}
 li a {
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Rosario', sans-serif;
   font-weight: 600;
 }
 figure {
@@ -32,7 +38,7 @@ figure {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 10%;
+  padding: 0 5% 0 7%;
   height: 4.7em;
   margin: -1.5em 0;
   background-color: white;
@@ -46,13 +52,37 @@ figure {
 }
 .navlinks li a {
   transition: all 0.3s ease 0s;
+  text-decoration: none;
+  color: black;
+  font-size: .9em;
+  position: relative;
 }
-.navlinks li a:hover {
-  color: grey;
+nav ul li a:hover {
+  color:black;
+  transition: .9s;
+}
+nav ul li a:after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%) scaleX(0);
+  transform-origin: 50% 50%;
+  width: 100%;
+  height: 2px;
+  background-color: red;
+  transition: transform 250ms;
+}
+nav ul li a:hover:after {
+  transform: translateX(-50%) scaleX(1);
 }
 .fullnav {
   position: sticky;
   top: 0px;
+  z-index: 1000;
+}
+.fullnav h2 {
+  letter-spacing: 3px;
 }
 button {
   padding: 15px 40px;
@@ -114,13 +144,26 @@ button:hover {
 #moretext {
   width: 90%;
 }
+#moretext1 {
+  width: 90%;
+}
+#moretext2 {
+  width: 90%;
+}
 .greybox {
   background-color: #F5F5F5;
   display: flex;
   align-items: center;
   position: relative;
   height: 600px;
-  margin: 2em 8em 3em 8em;
+  margin: 2em 4em 3em 4em;
+}
+.featured-logo {
+  position: absolute;
+  right: 1em;
+  bottom: 0;
+  font-size: 2.5em;
+  letter-spacing: 3px;
 }
 .greybox img {
   width:50%;
@@ -129,25 +172,102 @@ button:hover {
   object-position: top;
 }
 .greybox-text {
-  padding: 1.4em;
+  padding: 2em;
   font-family: 'Playfair Display', serif;
+  font-weight: 200;
   font-size: 1.5em;
   text-align: left;
 }
 .greybox-text p {
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Rosario', sans-serif;
   font-weight: 300;
   font-size: .7em;
   color: grey;
 }
-.greybox-logo {
-  position: absolute;
-  bottom: .1em;
-  right: 1em;
-  font-size: 3em;
-}
 span {
   color: red;
+}
+hr {
+  margin-top: 2em;
+}
+.first-container {
+  background-color: #F5F5F5;
+  padding: 3em 4em;
+	display: grid;
+  grid-template-columns: 70% 30%;
+  column-gap: 2em;
+  text-align: left;
+}
+.first-container img {
+  width: 100%;
+  height: 30em;
+  margin-top: 1.5em;
+  object-fit: cover;
+}
+.first-container h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.8em;
+  font-weight: 200;
+  margin-top: .5em;
+}
+.first-container h3 {
+  font-size: 1.4em;
+  letter-spacing: 2.5px;
+  font-weight: 400;
+}
+.currentposts p {
+  font-size: .9em;
+  letter-spacing: 1px;
+}
+.sidebar-logo {
+  font-weight: 800;
+  color: black;
+}
+.first-container p {
+  margin-top: -1em;
+}
+.first-container ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+.list {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  text-align: left;
+
+}
+.list ul li {
+  line-height: 3em;
+  margin-right: 2em;
+}
+.othertext {
+  padding: .7em 0 0 0;
+  margin-right: 1.5em;
+  letter-spacing: 0;
+  line-height: 1.9em;
+  font-weight: 200;
+}
+.latestposts p {
+  font-size: .8em;
+  letter-spacing: 1px;
+  margin-top: -1.5em;
+}
+.featuredposts img {
+  width: 100%;
+  height: 15em;
+  object-fit: cover;
+}
+.featuredposts p {
+  font-size: .8em;
+  letter-spacing: 1px;
+  margin-top: -1.5em;
+}
+.featuredposttext {
+  margin-bottom: 0;
+}
+.featuredposts h4 {
+  margin-top: .3em;
 }
 .girl {
   width: 100%;
@@ -184,7 +304,6 @@ span {
 {
   .greybox {
     display: block;
-    margin: 2em;
     height: 100%;
   }
   .greybox img {
@@ -193,20 +312,72 @@ span {
   .greybox-text {
     margin-top: -1.5em;
   }
-
+  .lastname {
+    line-height: 2.5em;
+  }
+  .list {
+    justify-content: center;
+    display: block;
+  }
+  .otherposts {
+    margin-top: 1.5em;
+  }
+  #billie {
+    object-position: left;
+  }
 }
 @media (max-width: 800px)
 {
   h1 {
     font-size: 2.5em;
   }
-  .greybox-logo {
+  .featured-logo {
     display: none;
+  }
+}
+@media (max-width: 865px)
+{
+  .first-container {
+    display: block;
+    text-align: center;
+  }
+  .featuredposts {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 1em;
+  }
+  .categories {
+    margin: 2em 0 .7em 0;
+  }
+  .othertext {
+    margin: 0 3em;
+  }
+  hr {
+    width: 90%;
+  }
+  .list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr .1fr 2fr 1fr 1fr;
+    text-align: left;
+    text-align: center;
+  }
+  .firstlist {
+    grid-column: 3/4;
+  }
+  .secondlist {
+    grid-column: 5/6;
+  }
+  .list ul li {
+    line-height: 3em;
+    margin: 0;
   }
 }
 @media (max-width: 900px)
 {
   .greybox {
-    margin: 2em 4em 3em 4em;
+    margin: 2em 2em 3em 2em;
+  }
+  .first-container {
+    padding: 3em 2em;
   }
 }
