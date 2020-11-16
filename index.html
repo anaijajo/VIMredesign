@@ -3,9 +3,9 @@
   <head>
     <meta charset="utf-8">
     <title>VIM MAGAZINE</title>
-    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Caveat:wght@400;700&family=Open+Sans+Condensed:wght@300&family=Oswald:wght@200;300&family=Playfair+Display:wght@400;500;600;700;800&family=Raleway:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200&family=Roboto:wght@100;300&display=swap" rel="stylesheet">    <link rel="stylesheet" href="styles/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Caveat:wght@400;700&family=Open+Sans+Condensed:wght@300&family=Oswald:wght@200;300&family=Playfair+Display:wght@400;500;600;700;800&family=Raleway:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200&family=Roboto:wght@100;300&display=swap" rel="stylesheet">    
+    <link rel="stylesheet" href="styles/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Rosario:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Rosarivo:ital@0;1&family=Sail&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
   </head>
   <body>
     <div class="socialmedia">
@@ -44,6 +44,7 @@
         </div>
       </figure>
     </div>
+
     <section class="fullnav">
       <div class="header">
         <h2 class="logo"><a href="index.html">VIM</a></h2>
@@ -63,8 +64,9 @@
         <img src="images/featured2.jpeg" alt="">
         <div class="greybox-text">
           <h2>Emmy Awards Fashion: Our Top Five Looks This Year</h2>
+          <span>FASHION</span>
           <p>‘From Zendaya to Tracee Ellis Ross, every outfit was impressive in its own way, but these are my top five...’</p>
-          <p>Oct. 8, 2020 by <span>Kweku Achenie</span></p>
+          <a><button type="button" name="button">READ MORE ⇢ </button></a>
         </div>
         <h2 class="featured-logo">VIM</h2>
       </div>
@@ -72,39 +74,51 @@
 
     <section class="first-container">
       <div class="currentposts">
-        <img src="images/leather.jpeg" alt="">
+        <img src="images/leather.jpg" alt="">
         <h2>Fall Trend Alert: Leather Pants</h2>
-        <p>Oct. 25, 2020 by <span>Tori Gardocki</span></p>
+        <span>FASHION</span>
+        <p class="about-article">As each season rolls around, I love finding new pieces that make me feel fashion-forward and stylish. Last fall was all about the puffer jackets and chunky boots, but this year, there’s a new trendy item that we all need in our closets: leather pants.</p>
+        <a><button type="button" name="button">READ MORE ⇢ </button></a>
+
         <img class="otherposts" src="images/skin.jpeg" alt="">
-        <h2>Preparing your Skin for Colder Weather</h2>
-        <p>Oct. 22, 2020 by <span>Lena Kim</span></p>
+        <h2>Preparing Your Skin for Colder Weather</h2>
+        <span>BEAUTY</span>
+        <p class="about-article">Cold weather is approaching quickly as fall sets in. With this, the air becomes much drier and for a lot of us, that can mess with our skin that we managed to maintain during the humid summer months. Now that the seasons are changing, our skincare should change too!</p>
+        <a><button type="button" name="button">READ MORE ⇢ </button></a>
+
         <img class="otherposts" src="images/halloween.jpeg" alt="">
         <h2>Celebrating Halloween in the COVID Era</h2>
-        <p>Oct. 22, 2020 by <span>Jenna Malinowski</span></p>
-        <img class="otherposts" src="images/shoes.jpeg" alt="">
+        <span>LIFESTYLE</span>
+        <p class="about-article">With COVID cases rapidly climbing and Halloween quickly approaching, many find themselves wondering how they’re going to celebrate the holiday under these unusual circumstances. . Even though parties are too dangerous, there are still plenty of ways to celebrate the spooky tradition.</p>
+        <a><button type="button" name="button">READ MORE ⇢ </button></a>
+
+        <img class="otherposts" id="shoes" src="images/shoes.jpeg" alt="">
         <h2>Shoes to Start Wearing: Fall Edition</h2>
-        <p>Oct. 22, 2020 by <span>Kweku Achenie</span></p>
+        <span>FASHION</span>
+        <p class="about-article">The trees are losing their leaves, and the temperatures are reducing. The days of summer have come to a close, and the memories of wearing warm weathered garments are slowly fading. Individuals are beginning to put up Halloween decorations, and planning their costumes.</p>
+        <a><button type="button" name="button">READ MORE ⇢ </button></a>
+
         <img class="otherposts" src="images/mask.jpeg" alt="">
         <h2>Mask On</h2>
-        <p>Oct. 22, 2020 by <span>Inna Espinoza</span></p>
-        <img class="otherposts" id="billie" src="images/billie.jpg" alt="">
-        <h2>Billie Eilish and Body Positivity, Let’s Talk About It.</h2>
-        <p>Oct. 22, 2020 by <span>Chloë Redeye</span></p>
+        <span>BEAUTY</span>
+        <p class="about-article">The grocery store is now the new beauty store! Believe it or not, natural foods can be used on your face to help brighten your skin, prevent acne, and reduce aging. They are also more cost-effective and better for the environment. One example is honey, which is an amazing ingredient that can be paired with just about any other ingredient to make the perfect DIY mask!</p>
+        <a><button type="button" name="button">READ MORE ⇢ </button></a>
+
+        <img src="images/maskne.jpeg" alt="">
+        <h2>Is Mask Acne A Thing?</h2>
+        <span>BEAUTY</span>
+        <p class="about-article">As if dealing with an inordinate amount of stress from the pandemic while navigating online work and school wasn’t enough, “Maskne,” a term created by health officials referring to ‘mask’ and ‘acne,’ is now a surging skin issue and unfortunate side effect from daily mask-wearing.</p>
+        <a><button type="button" name="button">READ MORE ⇢ </button></a>
       </div>
       <div class="sidebar">
         <h3 class="categories">Categories</h3>
         <div class="list">
-          <ul class="firstlist">
-            <li>Fashion</li>
-            <li>Beauty</li>
-            <li>Technology</li>
-            <li>Art</li>
-          </ul>
-          <ul class="secondlist">
-            <li>Food</li>
-            <li>Entertainment</li>
-            <li>Current Events</li>
-            <li>VIMspiration</li>
+          <ul>
+            <li><a href="fashion.html">Fashion</a></li>
+            <li><a>Beauty</a></li>
+            <li><a>Lifestyle</a></li>
+            <li><a>Current Events</a></li>
+            <li><a>VIMspiration</a></li>
           </ul>
         </div>
         <hr>
@@ -117,13 +131,18 @@
           <label for="lname">Email Address:</label><br>
           <input type="email" id="email" name="email">
         </form>
+        <a><button type="button" name="button">SUBMIT</button></a>
         <hr>
         <h3>About <span class="sidebar-logo">VIM</span></h3> 
         <p class="othertext">VIM Magazine is a registered student organization at Michigan State University. The name “VIM” comes from the MSU fight song and means enthusiasm and vitality. VIM Magazine features content as it relates to fashion, beauty, health, lifestyle, and college life at MSU.</p>
         <hr>
         <div class="latestposts">
           <h3>Latest Posts</h3>
-          <h4>Fashion Aesthetics for This Fall That Won’t Break the Bank</h4>
+          <!--<h4>What You Need to Know in the Latest Nail Art Trends</h4>
+          <p>Nov. 10, 2020 by <span>Chloe West</span></p>
+          <h4>5 Things You Need to Know About Thrifting</h4>
+          <p>Nov. 10, 2020 by <span>Tori Gardocki</span></p>-->
+          <h4><a href="article.html">Fashion Aesthetics for This Fall That Won’t Break the Bank</a></h4>
           <p>Oct. 25, 2020 by <span>Grace Dobie</span></p>
           <h4>Disposable Cameras are Saving our Generation</h4>
           <p>Oct. 25, 2020 by <span>Tori Gardocki</span></p>
@@ -134,34 +153,45 @@
         <h3 class="featuredposttext">Featured Posts</h3>
         <div class="featuredposts">
           <div class="firstpostlist">
+            <img src="images/mindful.jpeg">
+            <h4>Upgrade Your Mind: A Guide to Mindfulness Meditation</h4>
+            <p>Nov. 10, 2020 by <span>Navya <span class="lastname">Kalia</span></span></p>
+            
+            <img src="images/vote.jpeg">
+            <h4>All for Show? A surprising number of opinionated college-aged students are not registered to vote.</h4>
+            <p>Nov. 10, 2020 by <span>Lucy <span class="lastname">VanRegenmorter</span></span></p>
+
+            <img src="images/kirsten.jpg">
+            <h4>“I Am” Affirmations, with Senator Kirsten Gillibrand</h4>
+            <p>Oct. 13, 2020 by <span>Hunter <span class="lastname">Gladwell</span></span></p>
+
             <img src="images/trump.jpeg">
             <h4>Why Trump Has Such An Immense Support System</h4>
             <p>Oct. 25, 2020 by <span>Alyeea <span class="lastname">Turner</span></span></p>
+          </div>
+
+          <div class="secondpostlist">
             <img src="images/kamala.png">
             <h4>What Kamala Harris Would Mean for Women</h4>
             <p>Oct. 13, 2020 by <span>Hunter <span class="lastname">Gladwell</span></span></p>
+
             <img src="images/donald.png">
             <h4>The Timeline of The White House COVID Outbreak</h4>
             <p>Oct. 13, 2020 by <span>Jenna <span class="lastname">Malinowski</span></span></p>
-          </div>
-          <div class="secondpostlist">
+
             <img src="images/black.jpeg">
             <h4>The Importance of Voting in the African American Community</h4>
             <p>Oct. 13, 2020 by <span>Alyeea <span class="lastname">Turner</span></span></p>
+
             <img src="images/dorm.jpeg">
             <h4>Decorating Your Living Space for Fall</h4>
             <p>Oct. 6, 2020 by <span>Chloë <span class="lastname">Redeye</span></span></p>
-            <img src="images/gabrielle.jpg">
-            <h4>VIMspiration: Gabrielle Fallis</h4>
-            <p>Apr. 29, 2020 by <span>VIM</span></p>
           </div>
         </div>
 	  </div>
     </section>
 
-    <img class="girl" src="images/girl.jpeg" alt="">
-
-    <footer>
+   <!-- <footer>
       <div class="footer-about">
         <h3>About</h3>
         <p>VIM Magazine is a registered student organization at Michigan State University. The name “VIM” comes from the MSU fight song and means enthusiasm and vitality. VIM Magazine features content as it relates to fashion, beauty, health, lifestyle, and college life at MSU.</p>
@@ -169,18 +199,18 @@
       <div class="footer-nav">
         <h3>Navigation</h3>
         <div class="navlists">
-        <ul>
-          <li>Fashion</li>
-          <li>Beauty</li>
-          <li>Technology</li>
-          <li>Art</li>
-          </ul>
           <ul>
-          <li>Food</li>
-          <li>Entertainment</li>
-          <li>Current Events</li>
-          <li>VIMspiration</li>
-          </ul>
+            <li>Fashion</li>
+            <li>Beauty</li>
+            <li>Technology</li>
+            <li>Art</li>
+            </ul>
+            <ul>
+            <li>Food</li>
+            <li>Entertainment</li>
+            <li>Current Events</li>
+            <li>VIMspiration</li>
+            </ul>
         </div>
       </div>
       <div class="footer-vim">
@@ -195,7 +225,7 @@
         </div>
       <a><button type="button" name="button">JOIN US</button></a>
       </div>
-    </footer>
+    </footer> -->
 
   </body>
 </html>
