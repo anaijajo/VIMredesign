@@ -10,26 +10,51 @@
 </head>
 <body>
     <!--Navigation Bar-->
-    <section class="fullnav">
-        <div class="header">
-          <h2 class="logo"><a href="index.html">VIM</a></h2>
-          <nav>
-            <ul class="navlinks">
-              <li><a href="#">ABOUT</a></li>
-              <li><a href="#">ISSUES</a></li>
-              <li><a href="#">BLOG</a></li>
-              <li><a href="#">CONTACT</a></li>
-            </ul>
-          </nav>
+    <header>
+        <div class="container">
+          <input type="checkbox" name="" id="check">
+          <div class="logo-container">
+            <h2 class="logo"><a href="index.html">VIM</a></h2>
+          </div>
+  
+          <div class="nav-btn">
+            <div class="nav-links">
+              <ul>
+                <li class="nav-link"><a href="about.html">About</a></li>
+                <li class="nav-link"><a href="https://issuu.com/vimfashion" target="_blank">Issues</a></li>
+                <li class="nav-link" id="blogg">
+                  <label for="drop-1" class="toggle">Blog<span>+</span></label>
+                  <a href="#">Blog<span>+</span></a>
+                  <input type="checkbox" id="drop-1">
+                  <div class="dropdown">
+                    <ul>
+                      <li class="dropdown-link"><a href="fashion.html">FASHION</a></li>
+                      <li class="dropdown-link"><a href="#">BEAUTY</a></li>
+                      <li class="dropdown-link"><a href="#">LIFESTYLE</a></li>
+                      <li class="dropdown-link"><a href="#">CURRENT EVENTS</a></li>
+                      <li class="dropdown-link"><a href="#">VIMSPIRATION</a></li>
+                    </ul>
+                  </div>
+                </li>
+                <li class="nav-link"><a href="#">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+  
+          <div class="hamburger-menu-container">
+            <div class="hamburger-menu">
+              <div></div>
+            </div>
+          </div>
         </div>
-    </section>
+      </header>
     <!--Banner Start-->
     <div class="fashionbanner">
-        <!--<img class="fashionbannerimg" src="images/fashionbannerimg.jpeg" alt="">-->
         <img class="fashionbannerimg" src="images/gif.gif" alt="">
-        <div class="overlay"></div>
-        <h1 id="fashiontitle">fashion</h1>
-        <h2>CATEGORY</h2>
+        <div class="fashionbanner-text">
+            <h1>fashion</h1>
+            <h2>CATEGORY</h2>
+        </div>
     </div>
     <!--Banner End-->
 
@@ -44,79 +69,168 @@
 
     <!--Fashion Blog Start-->
     <section class="fashionblog">
-
-        <!--Post 1 Start-->
-        <div class="fashionposts">
-            <img src="images/thrift.jpeg" alt="">
-            <div>
-                <h3>5 Things You Need To Know About Thrifting</h3>
-                <p>Ever since I was little, one of my favorite things to do was spend whole days with my mom, going from one antique store to the next...</p>
-                <p>Nov. 10, 2020 by <span>Tori Gardocki</span></p>
-                <a><button type="button" name="button">READ MORE ⇢ </button></a>
+        <section class="blog-column1">
+            <!--Post 1 Start-->
+            <div class="fashionposts">
+                <img src="images/thrift.jpeg" alt="">
+                <div>
+                    <h3>5 Things You Need To Know About Thrifting</h3>
+                    <p>Ever since I was little, one of my favorite things to do was spend whole days with my mom, going from one antique store to the next...</p>
+                    <p>Nov. 10, 2020 by <span>Tori Gardocki</span></p>
+                    <a><button type="button" name="button">READ MORE ⇢ </button></a>
+                </div>
             </div>
-        </div>
-        <!--Post 1 End-->
+            <!--Post 1 End-->
 
-        <!--Post 2 Start-->
-        <div class="fashionposts">
-            <img src="images/fallstyle.jpeg" alt="">
-            <div>
-                <h3>3 Easy Ways To Up Your Style Game This Fall</h3>
-                <p>Yes, maybe this fall is a little different and yes, we all probably have fewer places to go, but...</p>
-                <p>Nov. 10, 2020 by <span>Tori Gardocki</span></p>
-                <a><button type="button" name="button">READ MORE ⇢ </button></a>
+            <!--Post 2 Start-->
+            <div class="fashionposts">
+                <img src="images/fallstyle.jpeg" alt="">
+                <div>
+                    <h3>3 Easy Ways To Up Your Style Game This Fall</h3>
+                    <p>Yes, maybe this fall is a little different and yes, we all probably have fewer places to go, but...</p>
+                    <p>Nov. 10, 2020 by <span>Tori Gardocki</span></p>
+                    <a><button type="button" name="button">READ MORE ⇢ </button></a>
+                </div>
             </div>
-        </div>
-        <!--Post 2 End-->
+            <!--Post 2 End-->
 
-        <!--Post 3 Start-->
-        <div class="fashionposts">
-            <img src="images/leather.jpg" alt="">
-            <div>
-                <h3>Fall Trend Alert: Leather Pants</h3>
-                <p>As each season rolls around, I love finding new pieces that make me feel fashion-forward and stylish...</p>
-                <p>Oct. 25, 2020 by <span>Tori Gardocki</span></p>
-                <a><button type="button" name="button">READ MORE ⇢ </button></a>
+            <!--Post 3 Start-->
+            <div class="fashionposts">
+                <img src="images/leather.jpg" alt="">
+                <div>
+                    <h3>Fall Trend Alert: Leather Pants</h3>
+                    <p>As each season rolls around, I love finding new pieces that make me feel fashion-forward and stylish...</p>
+                    <p>Oct. 25, 2020 by <span>Tori Gardocki</span></p>
+                    <a><button type="button" name="button">READ MORE ⇢ </button></a>
+                </div>
             </div>
-        </div>
-        <!--Post 3 End-->
+            <!--Post 3 End-->
 
-        <!--Post 4 Start-->
-        <div class="fashionposts">
-            <img class="shoealign" src="images/shoes.jpeg" alt="">
-            <div>
-                <h3>Shoes to Start Wearing: Fall Edition</h3>
-                <p>The trees are losing their leaves, and the temperatures are reducing. The days of summer have come to a close, and the memories...</p>
-                <p>Oct. 22, 2020 by <span>Kweku Achenie</span></p>
-                <a><button type="button" name="button">READ MORE ⇢ </button></a>
+            <!--Post 4 Start-->
+            <div class="fashionposts">
+                <img class="shoealign" src="images/shoes.jpeg" alt="">
+                <div>
+                    <h3>Shoes to Start Wearing: Fall Edition</h3>
+                    <p>The trees are losing their leaves, and the temperatures are reducing. The days of summer have come to a close, and the memories...</p>
+                    <p>Oct. 22, 2020 by <span>Kweku Achenie</span></p>
+                    <a><button type="button" name="button">READ MORE ⇢ </button></a>
+                </div>
             </div>
-        </div>
-        <!--Post 4 End-->
+            <!--Post 4 End-->
 
-        <!--Post 5 Start-->
-        <div class="fashionposts">
-            <img src="images/trends.jpeg" alt="">
-            <div>
-                <h3>5 Fall Trends To Look Out For</h3>
-                <p>As we take in our last few breaths of summer, we look towards fall as rebirth, reinvention, and relaxation...</p>
-                <p>Oct. 13, 2020 by <span>Alexia Guatalupe</span></p>
-                <a><button type="button" name="button">READ MORE ⇢ </button></a>
+            <!--Post 5 Start-->
+            <div class="fashionposts">
+                <img src="images/trends.jpeg" alt="">
+                <div>
+                    <h3>5 Fall Trends To Look Out For</h3>
+                    <p>As we take in our last few breaths of summer, we look towards fall as rebirth, reinvention, and relaxation...</p>
+                    <p>Oct. 13, 2020 by <span>Alexia Guatalupe</span></p>
+                    <a><button type="button" name="button">READ MORE ⇢ </button></a>
+                </div>
             </div>
-        </div>
-        <!--Post 5 End-->
+            <!--Post 5 End-->
 
-        <!--Post 6 Start-->
-        <div class="fashionposts">
-            <img src="images/destress.jpeg" alt="">
-            <div>
-                <h3>How To De-Stress In Style</h3>
-                <p>We all have a lot on our plates right now. School seems like it just started and the exams...</p>
-                <p>Oct. 9, 2020 by <span>Alexia Saucedo</span></p>
-                <a><button type="button" name="button">READ MORE ⇢ </button></a>
+            <!--Post 6 Start-->
+            <div class="fashionposts">
+                <img src="images/destress.jpeg" alt="">
+                <div>
+                    <h3>How To De-Stress In Style</h3>
+                    <p>We all have a lot on our plates right now. School seems like it just started and the exams...</p>
+                    <p>Oct. 9, 2020 by <span>Alexia Saucedo</span></p>
+                    <a><button type="button" name="button">READ MORE ⇢ </button></a>
+                </div>
             </div>
-        </div>
-        <!--Post 6 End-->
+            <!--Post 6 End-->
+        </section>
+        <section class="blog-column2">
+            <!--Post 1 Start-->
+            <div class="fashionposts">
+                <img src="images/thrift.jpeg" alt="">
+                <div>
+                    <h3>5 Things You Need To Know About Thrifting</h3>
+                    <p>Ever since I was little, one of my favorite things to do was spend whole days with my mom, going from one antique store to the next...</p>
+                    <p>Nov. 10, 2020 by <span>Tori Gardocki</span></p>
+                    <a><button type="button" name="button">READ MORE ⇢ </button></a>
+                </div>
+            </div>
+            <!--Post 1 End-->
+
+            <!--Post 2 Start-->
+            <div class="fashionposts">
+                <img src="images/fallstyle.jpeg" alt="">
+                <div>
+                    <h3>3 Easy Ways To Up Your Style Game This Fall</h3>
+                    <p>Yes, maybe this fall is a little different and yes, we all probably have fewer places to go, but...</p>
+                    <p>Nov. 10, 2020 by <span>Tori Gardocki</span></p>
+                    <a><button type="button" name="button">READ MORE ⇢ </button></a>
+                </div>
+            </div>
+            <!--Post 2 End-->
+
+            <!--Post 3 Start-->
+            <div class="fashionposts">
+                <img src="images/leather.jpg" alt="">
+                <div>
+                    <h3>Fall Trend Alert: Leather Pants</h3>
+                    <p>As each season rolls around, I love finding new pieces that make me feel fashion-forward and stylish...</p>
+                    <p>Oct. 25, 2020 by <span>Tori Gardocki</span></p>
+                    <a><button type="button" name="button">READ MORE ⇢ </button></a>
+                </div>
+            </div>
+            <!--Post 3 End-->
+
+            <!--Post 4 Start-->
+            <div class="fashionposts">
+                <img class="shoealign" src="images/shoes.jpeg" alt="">
+                <div>
+                    <h3>Shoes to Start Wearing: Fall Edition</h3>
+                    <p>The trees are losing their leaves, and the temperatures are reducing. The days of summer have come to a close, and the memories...</p>
+                    <p>Oct. 22, 2020 by <span>Kweku Achenie</span></p>
+                    <a><button type="button" name="button">READ MORE ⇢ </button></a>
+                </div>
+            </div>
+            <!--Post 4 End-->
+
+            <!--Post 5 Start-->
+            <div class="fashionposts">
+                <img src="images/trends.jpeg" alt="">
+                <div>
+                    <h3>5 Fall Trends To Look Out For</h3>
+                    <p>As we take in our last few breaths of summer, we look towards fall as rebirth, reinvention, and relaxation...</p>
+                    <p>Oct. 13, 2020 by <span>Alexia Guatalupe</span></p>
+                    <a><button type="button" name="button">READ MORE ⇢ </button></a>
+                </div>
+            </div>
+            <!--Post 5 End-->
+
+            <!--Post 6 Start-->
+            <div class="fashionposts">
+                <img src="images/destress.jpeg" alt="">
+                <div>
+                    <h3>How To De-Stress In Style</h3>
+                    <p>We all have a lot on our plates right now. School seems like it just started and the exams...</p>
+                    <p>Oct. 9, 2020 by <span>Alexia Saucedo</span></p>
+                    <a><button type="button" name="button">READ MORE ⇢ </button></a>
+                </div>
+            </div>
+            <!--Post 6 End-->
+        </section>
     </section>
     <!--Fashion Blog End-->
+    <!--Footer-->
+    <footer>
+        <h2>VIM</h2>
+        <div class="socialmedia" id="footermedia">
+          <a href="http://facebook.com/VIMMSU" target="_blank"><img src="images/facebook.png" alt="facebook"></a>
+          <a href="http://instagram.com/vimmsu" target="_blank"><img src="images/instagram.png" alt="instagram"></a>
+          <a href="https://www.linkedin.com/company/VIM-Magazine" target="_blank"><img src="images/linkedin.png" alt="linkedin"></a>
+          <a href="http://pinterest.com/vimmsu" target="_blank"><img src="images/pinterest.png" alt="pinterest"></a>
+          <a href="http://twitter.com/vimmsu" target="_blank"><img src="images/twitter.png" alt="twitter"></a>
+          <a href="http://youtube.com/channel/UCQ2M11V-Ct3e0KOfYIciebw" target="_blank"><img src="images/youtube.png" alt="youtube"></a>
+        </div>
+        <a><button type="button" name="button">JOIN US</button></a>
+      </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/barba.js/0.0.2/barba.min.js" integrity="sha512-j0ThLeHF8KI1DZjV/vAJ0CKkDAMAsZbFA1KarA2jIfzAmXn3di3krSq9LJrv/gBVsUnouKqS/agIoQpxj/3Hkg==" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
 </body>
 </html>

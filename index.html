@@ -2,10 +2,13 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>VIM MAGAZINE</title>
     <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Caveat:wght@400;700&family=Open+Sans+Condensed:wght@300&family=Oswald:wght@200;300&family=Playfair+Display:wght@400;500;600;700;800&family=Raleway:ital,wght@0,200;0,300;0,400;0,600;0,700;1,200&family=Roboto:wght@100;300&display=swap" rel="stylesheet">    
-    <link rel="stylesheet" href="styles/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Rosario:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Rosarivo:ital@0;1&family=Sail&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles/style.css">
+    
   </head>
   <body>
     <div class="socialmedia">
@@ -45,26 +48,53 @@
       </figure>
     </div>
 
-    <section class="fullnav">
-      <div class="header">
-        <h2 class="logo"><a href="index.html">VIM</a></h2>
-        <nav>
-          <ul class="navlinks">
-            <li><a href="#">ABOUT</a></li>
-            <li><a href="#">ISSUES</a></li>
-            <li><a href="#">BLOG</a></li>
-            <li><a href="#">CONTACT</a></li>
-          </ul>
-        </nav>
+    <!------------Navigation Start-------------->
+    <header>
+      <div class="container">
+        <input type="checkbox" name="" id="check">
+        <div class="logo-container">
+          <h2 class="logo"><a href="index.html">VIM</a></h2>
+        </div>
+
+        <div class="nav-btn">
+          <div class="nav-links">
+            <ul>
+              <li class="nav-link"><a href="about.html">About</a></li>
+              <li class="nav-link"><a href="https://issuu.com/vimfashion" target="_blank">Issues</a></li>
+              <li class="nav-link" id="blogg">
+                <label for="drop-1" class="toggle">Blog<span>+</span></label>
+                <a href="#">Blog<span>+</span></a>
+                <input type="checkbox" id="drop-1">
+                <div class="dropdown">
+                  <ul>
+                    <li class="dropdown-link"><a href="fashion.html">FASHION</a></li>
+                    <li class="dropdown-link"><a href="#">BEAUTY</a></li>
+                    <li class="dropdown-link"><a href="#">LIFESTYLE</a></li>
+                    <li class="dropdown-link"><a href="#">CURRENT EVENTS</a></li>
+                    <li class="dropdown-link"><a href="#">VIMSPIRATION</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="nav-link"><a href="#">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="hamburger-menu-container">
+          <div class="hamburger-menu">
+            <div></div>
+          </div>
+        </div>
       </div>
-    </section>
+    </header>
+    <!--------------Navigation End------------->
 
     <section class="featured">
       <div class="greybox">
         <img src="images/featured2.jpeg" alt="">
         <div class="greybox-text">
           <h2>Emmy Awards Fashion: Our Top Five Looks This Year</h2>
-          <span>FASHION</span>
+          <span id="category">FASHION</span>
           <p>‘From Zendaya to Tracee Ellis Ross, every outfit was impressive in its own way, but these are my top five...’</p>
           <a><button type="button" name="button">READ MORE ⇢ </button></a>
         </div>
@@ -133,7 +163,7 @@
         </form>
         <a><button type="button" name="button">SUBMIT</button></a>
         <hr>
-        <h3>About <span class="sidebar-logo">VIM</span></h3> 
+        <h3 class="sidebar-logo">About <span>VIM</span></h3> 
         <p class="othertext">VIM Magazine is a registered student organization at Michigan State University. The name “VIM” comes from the MSU fight song and means enthusiasm and vitality. VIM Magazine features content as it relates to fashion, beauty, health, lifestyle, and college life at MSU.</p>
         <hr>
         <div class="latestposts">
@@ -164,13 +194,13 @@
             <img src="images/kirsten.jpg">
             <h4>“I Am” Affirmations, with Senator Kirsten Gillibrand</h4>
             <p>Oct. 13, 2020 by <span>Hunter <span class="lastname">Gladwell</span></span></p>
-
-            <img src="images/trump.jpeg">
-            <h4>Why Trump Has Such An Immense Support System</h4>
-            <p>Oct. 25, 2020 by <span>Alyeea <span class="lastname">Turner</span></span></p>
           </div>
 
           <div class="secondpostlist">
+            <img src="images/trump.jpeg">
+            <h4>Why Trump Has Such An Immense Support System</h4>
+            <p>Oct. 25, 2020 by <span>Alyeea <span class="lastname">Turner</span></span></p>
+
             <img src="images/kamala.png">
             <h4>What Kamala Harris Would Mean for Women</h4>
             <p>Oct. 13, 2020 by <span>Hunter <span class="lastname">Gladwell</span></span></p>
@@ -178,54 +208,43 @@
             <img src="images/donald.png">
             <h4>The Timeline of The White House COVID Outbreak</h4>
             <p>Oct. 13, 2020 by <span>Jenna <span class="lastname">Malinowski</span></span></p>
-
-            <img src="images/black.jpeg">
-            <h4>The Importance of Voting in the African American Community</h4>
-            <p>Oct. 13, 2020 by <span>Alyeea <span class="lastname">Turner</span></span></p>
-
-            <img src="images/dorm.jpeg">
-            <h4>Decorating Your Living Space for Fall</h4>
-            <p>Oct. 6, 2020 by <span>Chloë <span class="lastname">Redeye</span></span></p>
           </div>
         </div>
+        <a class="twitter-timeline" data-width="640" data-height="600" href="https://twitter.com/vimmsu?ref_src=twsrc%5Etfw">Check out our latest tweets!</a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 	  </div>
     </section>
 
-   <!-- <footer>
-      <div class="footer-about">
-        <h3>About</h3>
-        <p>VIM Magazine is a registered student organization at Michigan State University. The name “VIM” comes from the MSU fight song and means enthusiasm and vitality. VIM Magazine features content as it relates to fashion, beauty, health, lifestyle, and college life at MSU.</p>
+    <footer>
+      <h2>VIM</h2>
+      <div class="socialmedia" id="footermedia">
+        <a href="http://facebook.com/VIMMSU" target="_blank"><img src="images/facebook.png" alt="facebook"></a>
+        <a href="http://instagram.com/vimmsu" target="_blank"><img src="images/instagram.png" alt="instagram"></a>
+        <a href="https://www.linkedin.com/company/VIM-Magazine" target="_blank"><img src="images/linkedin.png" alt="linkedin"></a>
+        <a href="http://pinterest.com/vimmsu" target="_blank"><img src="images/pinterest.png" alt="pinterest"></a>
+        <a href="http://twitter.com/vimmsu" target="_blank"><img src="images/twitter.png" alt="twitter"></a>
+        <a href="http://youtube.com/channel/UCQ2M11V-Ct3e0KOfYIciebw" target="_blank"><img src="images/youtube.png" alt="youtube"></a>
       </div>
-      <div class="footer-nav">
-        <h3>Navigation</h3>
-        <div class="navlists">
-          <ul>
-            <li>Fashion</li>
-            <li>Beauty</li>
-            <li>Technology</li>
-            <li>Art</li>
-            </ul>
-            <ul>
-            <li>Food</li>
-            <li>Entertainment</li>
-            <li>Current Events</li>
-            <li>VIMspiration</li>
-            </ul>
-        </div>
-      </div>
-      <div class="footer-vim">
-        <h2>VIM</h2>
-        <div class="socialmedia" id="footermedia">
-          <a href="http://facebook.com/VIMMSU" target="_blank"><img src="images/facebook.png" alt="facebook"></a>
-          <a href="http://instagram.com/vimmsu" target="_blank"><img src="images/instagram.png" alt="instagram"></a>
-          <a href="https://www.linkedin.com/company/VIM-Magazine" target="_blank"><img src="images/linkedin.png" alt="linkedin"></a>
-          <a href="http://pinterest.com/vimmsu" target="_blank"><img src="images/pinterest.png" alt="pinterest"></a>
-          <a href="http://twitter.com/vimmsu" target="_blank"><img src="images/twitter.png" alt="twitter"></a>
-          <a href="http://youtube.com/channel/UCQ2M11V-Ct3e0KOfYIciebw" target="_blank"><img src="images/youtube.png" alt="youtube"></a>
-        </div>
       <a><button type="button" name="button">JOIN US</button></a>
-      </div>
-    </footer> -->
+    </footer>
 
+
+    <div class="intro">
+      <div class="intro-text">
+        <h1 class="hide" id="intrologo">
+          <span class="text">VIM</span>
+        </h1>
+        <h1 class="hide" id="introtext">
+          <span class="text">Your Source For Style</span>
+        </h1>
+        <h1 class="hide" id="introtext">
+          <span class="text">At Michigan State University</span>
+        </h1>
+      </div>
+    </div>
+    <div class="introslider"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js" integrity="sha512-IQLehpLoVS4fNzl7IfH8Iowfm5+RiMGtHykgZJl9AWMgqx0AmJ6cRWcB+GaGVtIsnC4voMfm8f2vwtY+6oPjpQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/barba.js/0.0.2/barba.min.js" integrity="sha512-j0ThLeHF8KI1DZjV/vAJ0CKkDAMAsZbFA1KarA2jIfzAmXn3di3krSq9LJrv/gBVsUnouKqS/agIoQpxj/3Hkg==" crossorigin="anonymous"></script>
+    <script src="styles/app.js"></script>
   </body>
 </html>

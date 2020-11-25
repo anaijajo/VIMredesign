@@ -10,19 +10,44 @@
 </head>
 <body>
     <!--Navigation Bar-->
-    <section class="fullnav">
-        <div class="header">
+    <header>
+      <div class="container">
+        <input type="checkbox" name="" id="check">
+        <div class="logo-container">
           <h2 class="logo"><a href="index.html">VIM</a></h2>
-          <nav>
-            <ul class="navlinks">
-              <li><a href="#">ABOUT</a></li>
-              <li><a href="#">ISSUES</a></li>
-              <li><a href="#">BLOG</a></li>
-              <li><a href="#">CONTACT</a></li>
-            </ul>
-          </nav>
         </div>
-      </section>
+
+        <div class="nav-btn">
+          <div class="nav-links">
+            <ul>
+              <li class="nav-link"><a href="about.html">About</a></li>
+              <li class="nav-link"><a href="https://issuu.com/vimfashion" target="_blank">Issues</a></li>
+              <li class="nav-link" id="blogg">
+                <label for="drop-1" class="toggle">Blog<span>+</span></label>
+                <a href="#">Blog<span>+</span></a>
+                <input type="checkbox" id="drop-1">
+                <div class="dropdown">
+                  <ul>
+                    <li class="dropdown-link"><a href="fashion.html">FASHION</a></li>
+                    <li class="dropdown-link"><a href="#">BEAUTY</a></li>
+                    <li class="dropdown-link"><a href="#">LIFESTYLE</a></li>
+                    <li class="dropdown-link"><a href="#">CURRENT EVENTS</a></li>
+                    <li class="dropdown-link"><a href="#">VIMSPIRATION</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="nav-link"><a href="#">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="hamburger-menu-container">
+          <div class="hamburger-menu">
+            <div></div>
+          </div>
+        </div>
+      </div>
+    </header>
     <!--Article Start-->
     <h2 class="article-title">Fashion Aesthetics for This Fall That Won’t Break the Bank</h2>
     <p>Oct. 8, 2020 by <span>Kweku Achenie</span></p>
@@ -68,5 +93,21 @@
         </div>
     </section>
     <!--Post Recommendations End-->
+
+    <!--Footer-->
+    <footer>
+      <h2>VIM</h2>
+      <div class="socialmedia" id="footermedia">
+        <a href="http://facebook.com/VIMMSU" target="_blank"><img src="images/facebook.png" alt="facebook"></a>
+        <a href="http://instagram.com/vimmsu" target="_blank"><img src="images/instagram.png" alt="instagram"></a>
+        <a href="https://www.linkedin.com/company/VIM-Magazine" target="_blank"><img src="images/linkedin.png" alt="linkedin"></a>
+        <a href="http://pinterest.com/vimmsu" target="_blank"><img src="images/pinterest.png" alt="pinterest"></a>
+        <a href="http://twitter.com/vimmsu" target="_blank"><img src="images/twitter.png" alt="twitter"></a>
+        <a href="http://youtube.com/channel/UCQ2M11V-Ct3e0KOfYIciebw" target="_blank"><img src="images/youtube.png" alt="youtube"></a>
+      </div>
+      <a><button type="button" name="button">JOIN US</button></a>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/barba.js/0.0.2/barba.min.js" integrity="sha512-j0ThLeHF8KI1DZjV/vAJ0CKkDAMAsZbFA1KarA2jIfzAmXn3di3krSq9LJrv/gBVsUnouKqS/agIoQpxj/3Hkg==" crossorigin="anonymous"></script>
+    <script src="app.js"></script>
 </body>
 </html>

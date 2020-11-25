@@ -14,13 +14,6 @@ h1 {
   line-height: 1.3em;
   margin-top: -.5em;
 }
-h2 a {
-  font-family: 'Rosario', sans-serif;
-  font-weight: 600;
-  font-size: 2em;
-  color: black;
-  text-decoration: none;
-}
 h4 {
   font-family: 'Playfair Display', serif;
   font-size: 1.2em;
@@ -43,71 +36,242 @@ figure {
   padding: 0;
   margin: 0;
 }
-.header {
+
+/*---------Nav Styles Start-----------*/
+
+header {
+  position: sticky;
+  top: 0;
+  background-color: white;
+  width: 100%;
+  z-index: 10000;
+}
+
+.container {
+  max-width: 70rem;
+  padding: 0 3rem;
+  margin: 0 auto;
   display: flex;
-  justify-content: space-between;
+  position: relative;
+  top: 0;
+  position: sticky;
+}
+
+.logo-container {
+  flex: 1;
+  display: flex;
   align-items: center;
-  padding: 0 5% 0 7%;
-  height: 4.7em;
-  margin: -1.5em 0;
+  height: 67px;
+}
+
+.nav-btn {
+  flex: .3;
+  display: flex;
+}
+
+.nav-links {
+  flex: 2;
+}
+
+.logo a {
+  font-family: 'Rosario', sans-serif;
+  font-weight: 600;
+  font-size: 1.8em;
+  color: black;
+  text-decoration: none;
+  line-height: 2rem;
+}
+
+.nav-links > ul{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  margin: 0;
+}
+
+.nav-link{
+  position: relative;
+  list-style-type: none;
+  text-decoration: none;
+  padding: 0 .5em;
+}
+
+.nav-link > a{
+  line-height: 1rem;
+  color: black;
+  padding: 0 .8rem;
+  letter-spacing: 1px;
+  font-size: .8rem;
+  align-items: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  justify-content: space-between;
+  transition: .5s;
+}
+
+.nav-link a:hover {
+  transition: .4s;
+  color: red;
+}
+
+.nav-link:hover > a{
+  transform: scale(1.1);
+}
+#dropicon {
+  padding:0;
+  margin: 0;
+}
+
+.dropdown{
+  position: absolute;
+  top: 110%;
+  left: 0;
+  width: 10rem;
+  transform: translateY(10px);
+  padding: 1em 0 1em 0;
+  margin-top: -.2em;
+  opacity: 0;
+  pointer-events: none;
+  transition: .5s;
   background-color: white;
 }
-.navlinks {
-  list-style: none;
+
+.dropdown ul{
+  position: relative;
+  list-style-type: none;
+  margin-left: -2.1em;
 }
-.navlinks li {
-  display: inline-block;
-  padding: 0 1em;
-}
-.navlinks li a {
-  transition: all 0.3s ease 0s;
-  text-decoration: none;
+
+.dropdown-link > a{
+  display: flex;
   color: black;
-  font-size: .9em;
+  padding: .5rem 1rem;
+  letter-spacing: 1px;
+  font-size: .8rem;
+  align-items: center;
+  justify-content: space-between;
+  transition: .3s;
+  text-decoration: none;
+}
+
+.dropdown-link:hover > a{
+  transition: .4s;
+  color: red;
+}
+.dropdown-link {
   position: relative;
 }
-nav ul li a:hover {
-  color:black;
-  transition: .9s;
+.nav-link:hover > .dropdown,
+.dropdown-link:hover > .dropdown{
+    transform: translate(0, 0);
+    opacity: 1;
+    pointer-events: auto;
 }
-nav ul li a:after {
+
+.hamburger-menu-container {
+  flex: 1;
+  display: none;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.hamburger-menu {
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hamburger-menu div {
+  width: 1.7rem;
+  height: 4px;
+  border-radius: 3px;
+  background-color: black;
+  position: relative;
+  z-index: 1001;
+}
+
+.hamburger-menu div:before,
+.hamburger-menu div:after {
   content: '';
   position: absolute;
-  left: 50%;
-  bottom: 0;
-  transform: translateX(-50%) scaleX(0);
-  transform-origin: 50% 50%;
-  width: 100%;
-  height: 2px;
-  background-color: red;
-  transition: transform 250ms;
+  width: inherit;
+  height: inherit;
+  background-color: black;
+  border-radius: 3px;
 }
-nav ul li a:hover:after {
-  transform: translateX(-50%) scaleX(1);
+
+.hamburger-menu div:before {
+  transform: translateY(-8px);
+  left: 0;
 }
-.fullnav {
-  position: sticky;
-  top: 0px;
-  z-index: 1000;
+
+.hamburger-menu div:after {
+  transform: translateY(8px);
+  left: 0;
 }
-.fullnav h2 {
-  letter-spacing: 3px;
+
+#check {
+  position: absolute;
+  top: 42%;
+  right: 3.1rem;
+  transform: translateY(-50%);
+  width: 2.3rem;
+  height: 2.3rem;
+  z-index: 1003;
+  cursor: pointer;
+  opacity: 0;
+  display: none;
 }
-button {
-  padding: 15px 40px;
+
+#check:checked ~ .hamburger-menu-container .hamburger-menu div{
+  background-color: transparent;
+}
+
+#check:checked ~ .hamburger-menu-container .hamburger-menu div:before{
+  transition: .4s;
+  transform: translateY(0) rotate(-45deg);
+}
+
+#check:checked ~ .hamburger-menu-container .hamburger-menu div:after{
+  transition: .4s;
+  transform: translateY(0) rotate(45deg);
+}
+
+.toggle, #drop-1 {
+  display: none;
+}
+
+@keyframes animation{
+  from{
+      opacity: 0;
+      transform: translateY(15px);
+  }
+  to{
+      opacity: 1;
+      transform: translateY(0px);
+  }
+}
+
+/*---------Nav Styles End-----------*/
+.slider button {
+  letter-spacing: 2px;
+  padding: 13px 35px;
   background-color: transparent;
   color: white;
-  letter-spacing: 2px;
-  border: 5px solid white;
+  border: 1.5px solid white;
+  font-size: .8em;
   cursor: pointer;
   transition: all 0.3s ease 0s;
 }
-button:hover {
+.slider button:hover {
   letter-spacing: 1px;
-  border: 5px solid black;
+  border: 1.5px solid black;
+  background-color: white;
+  color: black;
   border-radius: 30px;
-  background-color: black;
-  color: white;
 }
 .socialmedia a img {
   height: 1.5em;
@@ -128,6 +292,7 @@ button:hover {
   margin: 1em;
   transform: translate(-50%, -50%);
   z-index: 100;
+  font-size: .9em;
 }
 .bannertext p {
   font-weight: 300;
@@ -187,11 +352,11 @@ button:hover {
   padding: 6em 2.5em 2.5em 2.5em;
   font-family: 'Playfair Display', serif;
   font-weight: 200;
-  font-size: 1.5em;
   text-align: left;
 }
 .greybox-text h2 {
-  margin: 0;
+  margin: 2em 0 .5em 0;
+  font-size: 2em;
 }
 .greybox-text span, .currentposts span {
   font-family: 'Rosario', sans-serif;
@@ -199,11 +364,16 @@ button:hover {
   font-weight: 300;
   letter-spacing: .2em;
   margin: 0;
+  color: red;
+}
+#category {
+  font-size: .9em;
 }
 .greybox-text p {
   font-family: 'Rosario', sans-serif;
   font-weight: 300;
-  font-size: .7em;
+  font-size: .9em;
+  line-height: 2em;
   color: black;
 }
 .about-article {
@@ -213,9 +383,6 @@ button:hover {
   font-weight: 300;
   font-size: .7em;
   color: grey;
-}
-span {
-  color: red;
 }
 hr {
   margin-top: 2em;
@@ -258,11 +425,15 @@ hr {
   font-size: 1em;
   font-weight: 300;
   line-height: 2em;
+  color: red;
 }
 .currentposts h2 {
   margin: .5em 0 0 0;
 }
-.sidebar-logo {
+.sidebar span {
+  color: red;
+}
+.sidebar-logo span {
   font-weight: 800;
   color: black;
 }
@@ -289,6 +460,7 @@ hr {
   text-decoration: none;
   color: black;
   transition: all 0.5s ease 0s;
+  font-size: .9em;
 }
 .list ul li a:hover {
   transition: .9s;
@@ -304,8 +476,10 @@ input {
   padding: 13px 35px;
   background-color: black;
   color: white;
+  letter-spacing: 2px;
   border: 2px solid black;
   cursor: pointer;
+  font-size: .7em;
   transition: all 0.3s ease 0s;
   margin-top: 1em;
 }
@@ -320,11 +494,18 @@ input {
   letter-spacing: 0;
   line-height: 1.9em;
   font-weight: 200;
+  font-size: .9em;
+}
+label {
+  font-size: .9em;
 }
 .latestposts p {
   font-size: .8em;
   letter-spacing: 1px;
   margin-top: -1.5em;
+}
+.latestposts h4, .featuredposts h4 {
+  font-size: 1.1em;
 }
 .featuredposts img {
   width: 100%;
@@ -398,39 +579,46 @@ input {
 .fashionbanner {
   position: relative;
 }
-.fashionbanner h2 {
+.fashionbannerimg {
+  top: .5em;
+  position: relative;
+  width: 100%;
+  height: 32em;
+  object-fit: cover;
+  object-position: 0 -4em;
+  filter: brightness(50%);
+}
+.fashionbanner-text {
+  position: absolute;
+  color: white;
+  top: 60%;
+  left: 50%;
+}
+.fashionbanner-text h1 {
+  font-family: 'Sail', serif;
+  font-size: 5em;
+  text-decoration: overline;
+  /*left: 50%;
+  bottom: 50%;
+  top: 60%;*/
+  transform: translate(-50%, -50%);
+}
+.fashionbanner-text h2 {
   font-family: 'Rosario', sans-serif;
   font-weight: 100;
   font-size: 1.1em;
   letter-spacing: .7em;
   position: absolute;
-  left: 46%;
-  bottom: 22%;
+  right: 45%;
+  bottom: 69%;
   color: white;
-}
-.fashionbannerimg {
-  top: 3em;
-  position: relative;
-  width: 100%;
-  height: 30em;
-  object-fit: cover;
-  object-position: 0 -4em;
-  filter: brightness(50%);
-}
-#fashiontitle {
-  border: 4px solid white;
-  color: white;
-  font-family: 'Sail', serif;
-  font-size: 5em;
-  position: absolute;
-  left: 50%;
-  bottom: 50%;
-  top: 60%;
-  transform: translate(-50%, -50%);
 }
 #clickablepost {
   margin-top: 8em;
   margin: 7.5em auto 0 auto;
+}
+#clickablepost span {
+  color: red;
 }
 #clickablepost h2 a {
   text-decoration: none;
@@ -455,22 +643,33 @@ input {
   margin: 0 auto;
 }
 .fashionblog {
-  width: 46em;
-  margin: 0 auto;
+  /* width: 46em;*/
+  margin: 0 5em;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.blog-column1 {
+  grid-column: 1/2;
+}
+.blog-column2 {
+  grid-column: 2/3;
 }
 .fashionposts {
-  display: flex;
   margin: 5em auto;
 }
+.fashionposts span {
+  color: red;
+}
 .fashionposts div {
-  text-align: left;
+  text-align: center;
   margin-left: 2em;
   margin-top: 1em;
   justify-content: center;
 }
 .fashionposts img {
-  width: 24em;
+  width: 90%;
   height: 20em;
+  margin: 0 2em;
   object-fit: cover;
 }
 .fashionposts h3 {
@@ -486,6 +685,7 @@ input {
   padding: 10px 25px;
   font-size: .7em;
   color: grey;
+  letter-spacing: 2px;
   border: 2px solid grey;
   cursor: pointer;
   transition: all 0.3s ease 0s;
@@ -505,78 +705,136 @@ input {
   padding: 10px 22px;
 }
 
+/*-------------- About Page ---------------*/
+.aboutgif {
+  position: relative;
+  width: 100%;
+  height: 40em;
+  object-fit: cover;
+  filter: brightness(50%);
+}
+.aboutgiftext {
+  position: absolute;
+  top: 44%;
+  left: 50%;
+  color: white;
+  margin: 1em;
+  transform: translate(-50%, -50%);
+  z-index: 100;
+}
+.aboutgiftext h1 {
+  font-size: 11em;
+  font-weight: 100;
+  font-family: 'Rosario', sans-serif;
+  margin: 0 0 -.1em 0;
+}
+.aboutgiftext h2 {
+  font-size: 2.8em;
+  font-weight: 100;
+  padding: 0;
+  margin: 0;
+  line-height: 1.3em;
+}
+.aboutgifbottom {
+  position: relative;
+  margin-top: 7em;
+  line-height: .9em;
+}
+.aboutsummary {
+  margin-top: 5em;
+  line-height: 2em;
+  padding: 0 7em;
+}
+.hoverimage {
+  width: auto;
+  height: 30em;
+  background-image: url("../images/banner1.png");
+}
+.hoverimage:hover {
+  background-image: url("../images/banner2.png");
+}
+
 /*--------------- Footer ------------------*/
 footer {
-  background-color: #1A1A1A;
-  margin: 0;
-  text-align: center;
-  padding: 3em 8em;
-  display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
-}
-footer ul {
-  list-style-type: none;
-  color: white;
-  line-height: 3em;
-  position: relative;
-  right: 2.4em;
-  bottom: 2em;
-}
-footer h3 {
-  font-weight: 100;
-  color: white;
-  font-family: 'Playfair Display', serif;
-  font-size: 2em;
-}
-.footer-about {
-  grid-column: 1/2;
-  color: white;
-}
-.footer-about p {
-  color: white;
-  line-height: 1.8em;
-  position: relative;
-  bottom: .3em;
-}
-.footer-nav, .footer-about {
-	text-align: left;
-}
-/* .footer-nav {
-  position: relative;
-  left: 12em;
-} */
-.footer-nav {
-  grid-column: 2/3;
-}
-/* .footer-vim {
-  bottom: 6em;
-  grid-column: 3/4;
-  position: relative;
-} */
-.footer-vim {
-  grid-column: 3/4;
-  margin-left: -4em;
-}
-.footer-vim h2 {
-	font-size: 8em;
-	font-weight: 100;
-	margin-bottom: 0;
-}
-/* .navlists {
-	display: flex;
-} */
-footer button {
-  padding: 15px 40px;
+  /*background-color: #997d7d;*/
   background-color: black;
+  padding: 2em 0;
+}
+footer h2 {
+  font-family: 'Rosario', sans-serif;
+  font-size: 6em;
+  font-weight: 200;
   color: white;
-  border: 2px solid black;
+  padding: 0;
+  margin: 0;
+}
+footer button {
+  padding: 13px 35px;
+  background-color: transparent;
+  color: white;
+  border: 1.5px solid white;
+  font-size: .8em;
+  letter-spacing: 2px;
   cursor: pointer;
   transition: all 0.3s ease 0s;
+  margin-top: .5em;
 }
-button:hover {
-  transition: all 0.3s ease 0s;
+footer button:hover {
+  letter-spacing: 1px;
+  border: 1.5px solid white;
+  background-color: white;
+  color: black;
   border-radius: 30px;
 }
+
+/*---------------------------Intro----------------------------*/
+.intro {
+  background: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10000000;
+}
+.introslider {
+  background: rgb(97, 105, 109);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: translateY(100%);
+}
+#intrologo {
+  font-family: 'Rosario', sans-serif;
+  font-size: 10em;
+  margin: 0;
+  color: white;
+}
+#introtext {
+  font-size: 2.8em;
+  font-weight: 100;
+  text-transform: capitalize;
+  color: white;
+}
+.intro-text {
+  color: white;
+}
+
+.hide {
+  background: black;
+  overflow: hidden;
+}
+
+.hide span {
+  transform: translateY(100%);
+  display: inline-block;
+}
+
 /*--------------- Other -----------------*/
 @keyframes slider {
   0% {
@@ -608,6 +866,15 @@ button:hover {
     left: 8em;
   }
 }
+@media (max-width: 1070px) 
+{
+  .aboutgiftext h2 {
+    font-size: 2.5em;
+  }
+  .aboutgiftext h1 {
+    font-size: 9.6em;
+  }
+}
 @media (max-width: 1000px) {
   #clickablepost img {
     width: 95%;
@@ -620,15 +887,20 @@ button:hover {
     margin: 1em auto;
   }
   .fashionbannerimg {
-    height: 24em;
+    height: 27em;
   }
-  #fashiontitle {
-    font-size: 4.4em;
+  #clickablepost h2 {
+    font-size: 1.2em;
   }
-  .fashionbanner h2 {
-    font-size: .9em;
+  .fashionposts h3 {
+    font-size: 1.5em;
   }
-
+  .aboutgiftext h1 {
+    font-size: 9.4em;
+  }
+  .aboutgiftext h2 {
+    font-size: 2.2em;
+  }
 }
 @media (max-width: 930px)
 {
@@ -652,6 +924,9 @@ button:hover {
   .greybox-text {
     padding: 4em 2em 2em 2em;
   }
+  .greybox-text h2 {
+    margin: 2.5em 0 .5em 0;
+  }
 }
 @media (max-width: 865px)
 {
@@ -659,6 +934,7 @@ button:hover {
     display: block;
     text-align: center;
   }
+
   .featuredposts {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -689,6 +965,25 @@ button:hover {
   .featuredposts img {
     width: 100%;
   }
+  .aboutgiftext {
+    width: 70%;
+    top: 40%;
+  }
+  .aboutgiftext div {
+    top: -2em;
+  }
+  .aboutgiftext h1 {
+    font-size: 9em;
+  }
+  .aboutgiftext h2 {
+    font-size: 2em;
+  }
+  .aboutgif {
+    height: 35em;
+  }
+  .twitter-timeline {
+    display: block;
+  }
 }
 @media (max-width: 800px) {
   h1 {
@@ -698,7 +993,7 @@ button:hover {
     display: none;
   }
   .greybox-text h2 {
-    font-size: 1.2em;
+    font-size: 1.8em;
   }
   .article-content p {
     width: 85%;
@@ -727,12 +1022,14 @@ button:hover {
     width: 95%;
     height: 15em;
   }
-  #fashiontitle {
-    font-size: 4em;
+  .fashionbanner-text h1 {
+    font-size: 4.5em;
   }
-  .fashionbanner h2 {
+  .fashionbanner-text h2 {
     font-size: .9em;
-    left: 44%;
+  }
+  .currentposts h2 {
+    font-size: 1.6em;
   }
   #clickablepost h2 {
     font-size: 1.4em;
@@ -748,19 +1045,22 @@ button:hover {
     margin: 4em auto;
   }
   .fashionposts div {
-    text-align: center;
     margin: 1em auto 0 auto;
-  }
-  .fashionposts img {
-    width: auto;
-    height: 20em;
-    object-fit: cover;
   }
   .fashionposts h3 {
     font-size: 1.6em;
   }
   .fashionblog {
-    width: 77%;
+    display: block;
+  }
+  #intrologo {
+    font-size: 8em;
+  }
+  #introtext {
+    font-size: 2.2em;
+  }
+  .aboutsummary {
+    padding: 0 5em;
   }
 }
 @media (max-width: 700px)
@@ -774,6 +1074,9 @@ button:hover {
   }
   .greybox-text {
     padding: 1.5em 2.5em 2.5em 2.5em;
+  }
+  .greybox-text h2 {
+    margin: 1em 0 .5em 0;
   }
   .greybox-text span {
     font-size: .65em;
@@ -797,16 +1100,20 @@ button:hover {
   .fashionbannerimg {
     object-position: top;
   }
-  #fashiontitle {
-    font-size: 3.6em;
+  .fashionbanner-text h1 {
+    font-size: 4.5em;
   }
-  .fashionbanner h2 {
+  .fashionbanner-text h2 {
     font-size: .8em;
-    left: 44.2%;
-    bottom: 24%;
+    bottom: 75%;
+    right: 50%;
   }
   .fashionblog {
-    width: 85%;
+    margin: 0 3em;
+  }
+  .fashionposts img {
+    width: 100%;
+    margin: 0;
   }
   .fashionposts button {
     font-size: .6em;
@@ -814,8 +1121,129 @@ button:hover {
   .currentposts img {
     height: 20em;
   }
+  .currentposts h2 {
+    font-size: 1.5em;
+  }
+  #clickablepost h2 {
+    font-size: 1.1em;
+  }
+  #clickablepost p, .fashionposts p {
+    font-size: .9em;
+  }
+  .fashionposts h3 {
+    font-size: 1.4em;
+  }
+  .aboutgif {
+    height: 30em;
+  }
+  .aboutgiftext {
+    width: 70%;
+    top: 37%;
+  }
+  .aboutgiftext div {
+    top: -3.7em;
+  }
+  .aboutsummary {
+    padding: 0 4em;
+  }
+  .aboutsummary p {
+    font-size: .9em;
+  }
+  footer h2 {
+    font-size: 5em;
+  }
+  footer button {
+    font-size: .7em;
+  }
+  .dropdown {
+    z-index: 100000;
+  }
+  .hamburger-menu-container {
+    display: flex;
+  }
+  #check {
+    display: block;
+    flex: none;
+  }
+  .nav-btn {
+    flex: none;
+    position: absolute;
+    background-color: white;
+    flex-direction: column;
+    height: 26vh;
+    width: 100%;
+    padding-top: .7em;
+    margin-top: 4em;
+    text-align: left;
+    justify-content: left;
+    left:0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    display: none;
+  }
+  #check:checked ~ .nav-btn {
+    display: block;
+    /*transition: .5s;
+    height: 65vh;*/
+  }
+  #drop-1 {
+    opacity: 1;
+    width: 50em;
+  }
+  .nav-links {
+    flex: initial;
+    width: 100%;
+  }
+  .nav-links ul {
+    flex-direction: column;
+    text-align: left;
+  }
+  .nav-link {
+    width: 100%;
+  }
+  .nav-link a {
+    line-height: 3.4em;
+    width: 100%;
+  }
+  .nav-link:hover {
+    transition: .4s;
+    transform: translateX(5px);
+  }
+  .dropdown {
+    position: initial;
+    top: initial;
+    left: initial;
+    transform: initial;
+    opacity: 1;
+    pointer-events: auto;
+    width: 100%;
+    padding: 0;
+    display: none;
+  }
+  .dropdown-link a {
+    padding-left: 2em;
+    line-height: 3.4em;
+  }
+  .nav-link: hover > .dropdown, 
+  .dropdown-link:hover > .dropdown {
+    display: block;
+  }
+
+  /* .hamburger-menu-container {
+    flex: 1;
+    display: none;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  .nav-btn {
+    flex: .3;
+    display: flex;
+  } */
 }
 @media (max-width: 600px) {
+  .bannertext {
+    font-size: .9em;
+  }
   .fashion-likes {
     display: block;
   }
@@ -834,17 +1262,38 @@ button:hover {
   .article-content h1 {
     font-size: 1.7em;
   }
-  .fashionposts img {
-    width: 95%;
-  }
   .currentposts h2 {
     font-size: 1.5em;
   }
   .currentposts p {
-    font-size: .7em;
+    font-size: .9em;
+  }
+  .othertext, label {
+    font-size: .8em;
+  }
+  .fashionposts img {
+    height: 18em;
+  }
+  #introtext {
+    font-size: 1.6em;
+  }
+  .aboutgiftext h1 {
+    font-size: 8.3em;
+  }
+  .aboutgiftext h2 {
+    font-size: 1.3;
+  }
+  .aboutsummary {
+    padding: 0 3em;
+  }
+  .aboutsummary p {
+    font-size: .84em;
   }
 }
 @media (max-width: 467px) {
+  .bannertext {
+    font-size: .8em;
+  }
   .list {
     display: block;
     text-align: center;
@@ -854,12 +1303,10 @@ button:hover {
     display: block;
   }
   .greybox-text h2 {
-    font-size: 1em;
+    font-size: 1.5em;
   }
-  .fashionbanner h2 {
-    font-size: .8em;
-    left: 42%;
-    bottom: 24%;
+  .fashionbanner-text h1 {
+    font-size: 4em;
   }
   .fashionposts h3 {
     font-size: 1.4em;
@@ -869,5 +1316,12 @@ button:hover {
   }
   .currentposts span {
     font-size: .8em;
+  }
+  .aboutgiftext {
+    width: 90%;
+    left: 47%;
+  }
+  .aboutgiftext h2 {
+    font-size: 1.7em;
   }
 }
