@@ -741,17 +741,9 @@ label {
   line-height: .9em;
 }
 .aboutsummary {
-  margin-top: 5em;
+  margin: 5em 0 2em 0;
   line-height: 2em;
   padding: 0 7em;
-}
-.hoverimage {
-  width: auto;
-  height: 30em;
-  background-image: url("../images/banner1.png");
-}
-.hoverimage:hover {
-  background-image: url("../images/banner2.png");
 }
 
 /*--------------- Footer ------------------*/
@@ -1224,22 +1216,10 @@ footer button:hover {
     padding-left: 2em;
     line-height: 3.4em;
   }
-  .nav-link: hover > .dropdown, 
+  .nav-link:hover > .dropdown, 
   .dropdown-link:hover > .dropdown {
     display: block;
   }
-
-  /* .hamburger-menu-container {
-    flex: 1;
-    display: none;
-    align-items: center;
-    justify-content: flex-end;
-  }
-  .nav-btn {
-    flex: .3;
-    display: flex;
-  } */
-}
 @media (max-width: 600px) {
   .bannertext {
     font-size: .9em;
@@ -1324,4 +1304,3 @@ footer button:hover {
   .aboutgiftext h2 {
     font-size: 1.7em;
   }
-}
